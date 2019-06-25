@@ -70,7 +70,6 @@ public class DownLoadService extends Service {
 
         /**
          * 开始下载
-         *
          * @param url
          */
         public void startDownLoad(String url) {
