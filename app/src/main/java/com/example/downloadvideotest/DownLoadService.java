@@ -134,7 +134,6 @@ public class DownLoadService extends Service {
     private Notification getNotification(String title, int progress) {
         Intent intent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             //创建渠道
             String id = "my_channel_01";

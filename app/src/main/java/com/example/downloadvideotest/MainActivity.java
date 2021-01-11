@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TAG = "MainActivity";
     private static final int WRITE_PERMISSION_CODE = 1000;
     //文件下载链接
-    private String url = "https://flv2.bn.netease.com/videolib1/1811/26/OqJAZ893T/HD/OqJAZ893T-mobile.mp4";//汽车视频
-
+    private String url = "https://video.openwhy.cn/ljojX4Shxtkn35xuPCvoD_tK6jG1";
+    public static final String BIG_VIDEO_URL = "http://vfx.mtime.cn/Video/2019/01/30/mp4/190130103623492184.mp4";
     private Context mContext;
 
     private Button btnStartDownLoad, btnPauseDownLoad, btnCancelDownLoad;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         baseDataInit();
-        bindViews();//跟前端按钮对上
+        bindViews();
         viewsAddListener();
         viewsDataInit();
     }
@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(mContext, "下载服务创建失败！", Toast.LENGTH_SHORT).show();
             return;
         }
-        Log.e(TAG,"view.getId()="+view.getId());
         switch (view.getId()) {
             case R.id.Main_btnStartDownLoad: {
                 downLoadBinder.startDownLoad(url);

@@ -61,7 +61,6 @@ public class DownLoadTask extends AsyncTask<String, Integer, Integer> {
                 //如果已下载的字节和文件总字节相等，说明已经下载完成了
                 return TYPE_SUCCESS;
             }
-
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     .addHeader("RANGE", "bytes=" + downLoadLength + "-") //断点继续下载
